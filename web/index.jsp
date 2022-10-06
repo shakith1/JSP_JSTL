@@ -26,7 +26,7 @@
         <c:set value="JSP" var="x"/>
 
         ${x}
-        
+
         <!--   Bean Property   -->
 
         <jsp:useBean id="user" class="com.infinity.webapp.User"/>
@@ -34,44 +34,59 @@
         <c:set value="Admin" property="name" target="${user}"/>
 
         <h1>${user.name}</h1>
-        
+
         <!--   Map Property   -->
-        
+
         <jsp:scriptlet>
             Map map = new HashMap();
             pageContext.setAttribute("map", map);
         </jsp:scriptlet>
-        
+
         <c:set value="PHP" property="name" target="${map}"/>
         ${map.name}
-        
+
         <!--Import--> 
-        
+
         <%--<c:import url="https://www.google.com" var="data"/>--%>
         <!--${data}-->
-        
+
         <c:import url="https://www.google.com" var="data">
             <c:param name="hl" value="si"/>
             <%--<c:param name="type" value="admin"/>--%>
         </c:import>
-        
+
         ${data}
-        
+
         <c:import url="/" var="data" context="/WCD2"/>
-        
+
         <%
             pageContext.setAttribute("name", "A");
-            pageContext.setAttribute("name", "B",PageContext.REQUEST_SCOPE);
-            pageContext.setAttribute("name", "C",PageContext.SESSION_SCOPE);
-            pageContext.setAttribute("name", "D",PageContext.APPLICATION_SCOPE);
+            pageContext.setAttribute("name", "B", PageContext.REQUEST_SCOPE);
+            pageContext.setAttribute("name", "C", PageContext.SESSION_SCOPE);
+            pageContext.setAttribute("name", "D", PageContext.APPLICATION_SCOPE);
         %>
-        
+
         <c:remove var="name"/>
-        
-        Page : ${pageScope.name}
-        Request : ${requestScope.name}
-        Session : ${sessionScope.name}
-        Application : ${applicationScope.name}
-        
+
+        Page : ${pageScope.name}<br/>
+        Request : ${requestScope.name}<br/>
+        Session : ${sessionScope.name}<br/>
+        Application : ${applicationScope.name}<br/>
+
+        <%
+            pageContext.setAttribute("name", "A");
+            pageContext.setAttribute("name", "B", PageContext.REQUEST_SCOPE);
+            pageContext.setAttribute("name", "C", PageContext.SESSION_SCOPE);
+            pageContext.setAttribute("name", "D", PageContext.APPLICATION_SCOPE);
+        %>
+
+        <c:remove var="name" scope="session"/>
+
+        Page : ${pageScope.name}<br/>
+        Request : ${requestScope.name}<br/>
+        Session : ${sessionScope.name}<br/>
+        Application : ${applicationScope.name}<br/>
+
+
     </body>
 </html>
