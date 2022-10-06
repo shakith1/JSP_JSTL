@@ -26,12 +26,16 @@
         <c:set value="JSP" var="x"/>
 
         ${x}
+        
+        <!--   Bean Property   -->
 
         <jsp:useBean id="user" class="com.infinity.webapp.User"/>
 
         <c:set value="Admin" property="name" target="${user}"/>
 
         <h1>${user.name}</h1>
+        
+        <!--   Map Property   -->
         
         <jsp:scriptlet>
             Map map = new HashMap();
@@ -40,5 +44,10 @@
         
         <c:set value="PHP" property="name" target="${map}"/>
         ${map.name}
+        
+        <!--Import--> 
+        
+        <c:import url="https://www.google.com" var="data"/>
+        ${data}
     </body>
 </html>
