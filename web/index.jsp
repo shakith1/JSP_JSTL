@@ -14,15 +14,21 @@
     </head>
     <body>
         <h1>Hello World!</h1>
-        
+
         <%
             pageContext.setAttribute("abc", "XYZ");
         %>
-        
+
         <c:out value="${abc}"/>
-        
+
         <c:set value="JSP" var="x"/>
-        
+
         ${x}
+
+        <jsp:useBean id="user" class="com.infinity.webapp.User"/>
+
+        <c:set value="Admin" property="name" target="${user}"/>
+
+        <h1>${user.name}</h1>
     </body>
 </html>
