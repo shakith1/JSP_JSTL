@@ -20,5 +20,9 @@
         %>
         
         <c:out value="${abc}"/>
+        
+        <c:set value="JSP" var="x"/>
+        
+        ${x}
     </body>
 </html>
