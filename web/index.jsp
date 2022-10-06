@@ -47,7 +47,14 @@
         
         <!--Import--> 
         
-        <c:import url="https://www.google.com" var="data"/>
+        <%--<c:import url="https://www.google.com" var="data"/>--%>
+        <!--${data}-->
+        
+        <c:import url="https://www.google.com" var="data">
+            <c:param name="hl" value="si"/>
+            <%--<c:param name="type" value="admin"/>--%>
+        </c:import>
+        
         ${data}
     </body>
 </html>
