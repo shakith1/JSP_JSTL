@@ -56,5 +56,8 @@
         </c:import>
         
         ${data}
+        
+        <c:import url="/" var="data" context="/WCD2"/>
+        
     </body>
 </html>
