@@ -59,5 +59,19 @@
         
         <c:import url="/" var="data" context="/WCD2"/>
         
+        <%
+            pageContext.setAttribute("name", "A");
+            pageContext.setAttribute("name", "B",PageContext.REQUEST_SCOPE);
+            pageContext.setAttribute("name", "C",PageContext.SESSION_SCOPE);
+            pageContext.setAttribute("name", "D",PageContext.APPLICATION_SCOPE);
+        %>
+        
+        <c:remove var="name"/>
+        
+        Page : ${pageScope.name}
+        Request : ${requestScope.name}
+        Session : ${sessionScope.name}
+        Application : ${applicationScope.name}
+        
     </body>
 </html>
