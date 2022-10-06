@@ -4,6 +4,8 @@
     Author     : Shakith
 --%>
 
+<%@page import="java.util.Map"%>
+<%@page import="java.util.HashMap"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
@@ -30,5 +32,13 @@
         <c:set value="Admin" property="name" target="${user}"/>
 
         <h1>${user.name}</h1>
+        
+        <jsp:scriptlet>
+            Map map = new HashMap();
+            pageContext.setAttribute("map", map);
+        </jsp:scriptlet>
+        
+        <c:set value="PHP" property="name" target="${map}"/>
+        ${map.name}
     </body>
 </html>
