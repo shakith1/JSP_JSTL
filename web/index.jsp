@@ -120,7 +120,11 @@
         </c:forEach>
 
         <c:forEach begin="1" end="5" varStatus="y">
-            <h1>OK ${y.count}</h1>
+            <!--<h1>OK ${y.count}</h1>-->
+        </c:forEach>
+
+        <c:forEach begin="5" end="8" varStatus="y">
+            <h1>OK ${y.index}</h1>
         </c:forEach>
 
     </body>
