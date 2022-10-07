@@ -55,7 +55,7 @@
             <%--<c:param name="type" value="admin"/>--%>
         </c:import>
 
-        ${data}
+        <%--${data}--%>
 
         <c:import url="/" var="data" context="/WCD2"/>
 
@@ -86,6 +86,12 @@
         Request : ${requestScope.name}<br/>
         Session : ${sessionScope.name}<br/>
         Application : ${applicationScope.name}<br/>
+        
+        <!--c:if-->
+        
+        <c:if test="true">
+            <h1>TRUE</h1>
+        </c:if>
 
 
     </body>
