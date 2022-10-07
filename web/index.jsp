@@ -199,5 +199,17 @@
                 None
             </c:otherwise>
         </c:choose>
+
+        <c:choose>
+            <c:when test="false">
+                A
+            </c:when>
+            <c:when test="false">
+                B
+            </c:when>
+            <c:otherwise>
+                None
+            </c:otherwise>
+        </c:choose>       
     </body>
 </html>
