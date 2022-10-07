@@ -214,6 +214,6 @@
 
         <!--c:redirect-->
 
-        <c:redirect url="http://www.google.com"/>
+        <%--<c:redirect url="http://www.google.com"/>--%>
     </body>
 </html>
