@@ -161,7 +161,29 @@
         </c:forEach>
 
         <c:forEach items="${ar}" var="v" varStatus="x">
-            <h1>${v}</h1>
+            <!--<h1>${v}</h1>-->
         </c:forEach>
+
+        <!--    c:forTokens    -->
+
+        <%
+            String data = "name=admin&password=1234";
+
+            pageContext.setAttribute("data", data);
+
+        %>
+
+        <c:forTokens var="x" items="${data}" delims="&">
+            <h1>
+                <c:forTokens var="y" items="${x}" delims="=" varStatus="a">
+                    <c:if test="${a.first}">
+                        Key = ${y} :
+                    </c:if>  
+                    <c:if test="${a.last}">
+                        Value : ${y}
+                    </c:if>
+                </c:forTokens>
+            </h1>
+        </c:forTokens>
     </body>
 </html>
