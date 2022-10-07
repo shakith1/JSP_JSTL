@@ -96,6 +96,10 @@
         <c:if var="x" test="${10 eq 10}"/>
         
         ${x}
+        
+        <c:if test="${x}">
+            <h1>Hello</h1>
+        </c:if>
 
     </body>
 </html>
