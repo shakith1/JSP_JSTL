@@ -185,5 +185,19 @@
                 </c:forTokens>
             </h1>
         </c:forTokens>
+
+        <!--   c: choose   -->
+
+        <c:choose>
+            <c:when test="true">
+                A
+            </c:when>
+            <c:when test="true">
+                B
+            </c:when>
+            <c:otherwise>
+                None
+            </c:otherwise>
+        </c:choose>
     </body>
 </html>
