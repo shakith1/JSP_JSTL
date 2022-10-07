@@ -108,6 +108,12 @@
         </c:catch>
         
         ${test}
+        
+        <!--  c:forEach  -->
+        
+        <c:forEach begin="1" end="5">
+            <h1>OK</h1>
+        </c:forEach>
 
     </body>
 </html>
