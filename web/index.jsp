@@ -94,25 +94,29 @@
         </c:if>
 
         <c:if var="x" test="${10 eq 10}"/>
-        
+
         ${x}
-        
+
         <c:if test="${x}">
             <h1>Hello</h1>
         </c:if>
-            
+
         <!--   c:catch   -->
-        
+
         <c:catch var="test">
-            <%=10/0%>
+            <%=10 / 0%>
         </c:catch>
-        
+
         ${test}
-        
+
         <!--  c:forEach  -->
-        
+
         <c:forEach begin="1" end="5">
             <h1>OK</h1>
+        </c:forEach>
+
+        <c:forEach begin="1" end="10" step="4">
+            <h1>OK1</h1>
         </c:forEach>
 
     </body>
