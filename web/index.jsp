@@ -87,7 +87,7 @@
         Session : ${sessionScope.name}<br/>
         Application : ${applicationScope.name}<br/>
 
-        <!--c:if-->
+        <!--    c:if    -->
 
         <c:if test="true">
             <h1>TRUE</h1>
@@ -100,6 +100,14 @@
         <c:if test="${x}">
             <h1>Hello</h1>
         </c:if>
+            
+        <!--   c:catch   -->
+        
+        <c:catch var="test">
+            <%=10/0%>
+        </c:catch>
+        
+        ${test}
 
     </body>
 </html>
