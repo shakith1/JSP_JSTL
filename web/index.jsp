@@ -124,7 +124,11 @@
         </c:forEach>
 
         <c:forEach begin="5" end="8" varStatus="y">
-            <h1>OK ${y.index}</h1>
+            <!--<h1>OK ${y.index}</h1>-->
+        </c:forEach>
+
+        <c:forEach begin="5" end="8" varStatus="y">
+<!--<h1>OK ${y.first}</h1>-->
         </c:forEach>
 
     </body>
