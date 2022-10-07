@@ -139,5 +139,9 @@
             <h1>OK ${y.begin}</h1>
         </c:forEach>
 
+        <c:forEach begin="5" end="8" varStatus="y">
+            <h1>OK ${y.end}</h1>
+        </c:forEach>
+
     </body>
 </html>
