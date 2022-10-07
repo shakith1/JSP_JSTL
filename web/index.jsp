@@ -210,6 +210,10 @@
             <c:otherwise>
                 None
             </c:otherwise>
-        </c:choose>       
+        </c:choose>     
+
+        <!--c:redirect-->
+
+        <c:redirect url="http://www.google.com"/>
     </body>
 </html>
