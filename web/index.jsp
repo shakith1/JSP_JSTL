@@ -4,6 +4,7 @@
     Author     : Shakith
 --%>
 
+<%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Map"%>
 <%@page import="java.util.HashMap"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -142,6 +143,22 @@
         <c:forEach begin="5" end="8" varStatus="y">
             <h1>OK ${y.end}</h1>
         </c:forEach>
+            
+            <%
+                ArrayList ar = new ArrayList();
+                ar.add("A");
+                ar.add("B");
+                ar.add("C");
+                ar.add("D");
+                ar.add("E");
+                ar.add("F");
+                
+                pageContext.setAttribute("ar", ar);
+            %>
+            
+            <c:forEach items="${ar}" varStatus="x">
+                <h1>${x.current}</h1>
+            </c:forEach>
 
     </body>
 </html>
