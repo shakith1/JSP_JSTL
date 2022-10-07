@@ -112,11 +112,15 @@
         <!--  c:forEach  -->
 
         <c:forEach begin="1" end="5">
-            <h1>OK</h1>
+            <!--<h1>OK</h1>-->
         </c:forEach>
 
         <c:forEach begin="1" end="10" step="4">
-            <h1>OK1</h1>
+            <!--<h1>OK1</h1>-->
+        </c:forEach>
+
+        <c:forEach begin="1" end="5" varStatus="y">
+            <h1>OK ${y.count}</h1>
         </c:forEach>
 
     </body>
