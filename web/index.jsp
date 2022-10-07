@@ -86,13 +86,16 @@
         Request : ${requestScope.name}<br/>
         Session : ${sessionScope.name}<br/>
         Application : ${applicationScope.name}<br/>
-        
+
         <!--c:if-->
-        
+
         <c:if test="true">
             <h1>TRUE</h1>
         </c:if>
 
+        <c:if var="x" test="${10 eq 10}"/>
+        
+        ${x}
 
     </body>
 </html>
