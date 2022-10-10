@@ -16,10 +16,12 @@
     <body>
         <h1>Hello World!</h1>
         
-        <c:set var="x" value="120000.2309"/>
+        <c:set var="x" value="1.01"/>
         
         <fmt:formatNumber value="${x}" type="currency" currencyCode="EUR" groupingUsed="false" minFractionDigits="10"/>
         
-        <fmt:formatNumber value="${x}" type="percent" maxIntegerDigits="10"/>
+        <fmt:formatNumber value="${x}" type="percent" maxIntegerDigits="10" groupingUsed="false"/>
+        
+        <fmt:formatNumber value="${x}" pattern="####"/>
     </body>
 </html>
