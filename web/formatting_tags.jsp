@@ -41,5 +41,7 @@
         <fmt:formatDate type="both" value="${now}" dateStyle="short" timeStyle="short"/>
         
         <fmt:formatDate type="time" value="${now}" pattern="H:m:s a"/>
+        
+        <h1> <fmt:formatDate type="both" value="${now}" dateStyle="full"/></h1>
     </body>
 </html>
