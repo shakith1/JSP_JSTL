@@ -64,7 +64,17 @@
         </fmt:bundle>
 
         <h1>${hello} World!!</h1>
-        
-        
+
+        <fmt:bundle basename="message">
+            <fmt:message key="hello"/>
+        </fmt:bundle>
+
+        <fmt:setLocale value="tm"/>
+
+        <fmt:bundle basename="message">
+            <fmt:message key="hello"/>
+        </fmt:bundle>
+
+
     </body>
 </html>
