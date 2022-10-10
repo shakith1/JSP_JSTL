@@ -47,9 +47,14 @@
         <fmt:parseDate var="x" value="2021-12-12 10:20:21 AM" pattern="yyyy-MM-dd hh:mm:ss a"/>
         
         ${x}
+        <br/><br/><br/>
         
         <!--   fmt:bundle   -->
         
-        <fmt:bundle basename="Data"/>
+        <fmt:bundle basename="com.infinity.webapp.Data" prefix="admin.">
+            <fmt:message key="name"/>
+            <br/>
+            <fmt:message key="age"/>
+        </fmt:bundle>
     </body>
 </html>
