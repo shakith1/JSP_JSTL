@@ -47,5 +47,9 @@
         <fmt:parseDate var="x" value="2021-12-12 10:20:21 AM" pattern="yyyy-MM-dd hh:mm:ss a"/>
         
         ${x}
+        
+        <!--   fmt:bundle   -->
+        
+        <fmt:bundle basename="Data"/>
     </body>
 </html>
