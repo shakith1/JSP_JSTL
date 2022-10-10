@@ -43,5 +43,9 @@
         <fmt:formatDate type="time" value="${now}" pattern="H:m:s a"/>
         
         <h1> <fmt:formatDate type="both" value="${now}" dateStyle="full"/></h1>
+        
+        <fmt:parseDate var="x" value="2021-12-12 10:20:21 AM" pattern="yyyy-MM-dd hh:mm:ss a"/>
+        
+        ${x}
     </body>
 </html>
