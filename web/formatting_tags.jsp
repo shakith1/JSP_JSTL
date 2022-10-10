@@ -4,6 +4,7 @@
     Author     : Shakith
 --%>
 
+<%@page import="java.util.Date"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
@@ -23,5 +24,20 @@
         <fmt:formatNumber value="${x}" type="percent" maxIntegerDigits="10" groupingUsed="false"/>
         
         <fmt:formatNumber value="${x}" pattern="####"/>
+        
+        <%
+            pageContext.setAttribute("now", new Date());
+        %>
+        
+        
+        <!--Or-->
+        
+        <jsp:useBean id="now" class="java.util.Date"/>
+        
+        <fmt:formatDate type="date" value="${now}"/>
+        
+        <fmt:formatDate type="time" value="${now}"/>
+        
+        <fmt:formatDate type="both" value="${now}" dateStyle="short" timeStyle="short"/>
     </body>
 </html>
