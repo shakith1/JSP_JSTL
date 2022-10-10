@@ -11,15 +11,17 @@ import java.util.ListResourceBundle;
  * @author Shakith
  */
 public class Data extends ListResourceBundle {
-    
+
     static final Object[][] contents = {
-        {"name","Shakith"},
-        {"age","20"}
+        {"user.name", "Shakith"},
+        {"user.age", "20"},
+        {"admin.name", "ABC"},
+        {"admin.age", "22"}
     };
 
     @Override
     protected Object[][] getContents() {
         return contents;
     }
-    
+
 }
