@@ -13,10 +13,8 @@ import java.util.ListResourceBundle;
 public class Data extends ListResourceBundle {
 
     static final Object[][] contents = {
-        {"user.name", "Shakith"},
-        {"user.age", "20"},
-        {"admin.name", "ABC"},
-        {"admin.age", "22"}
+        {"si.hello", "සාදරයෙන් පිළිගනිමු"},
+        {"en.hello", "Hello"}
     };
 
     @Override
