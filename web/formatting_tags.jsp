@@ -19,5 +19,7 @@
         <c:set var="x" value="120000.2309"/>
         
         <fmt:formatNumber value="${x}" type="currency" currencyCode="EUR" groupingUsed="false" minFractionDigits="10"/>
+        
+        <fmt:formatNumber value="${x}" type="percent" maxIntegerDigits="10"/>
     </body>
 </html>
