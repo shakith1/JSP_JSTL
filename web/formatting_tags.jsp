@@ -57,10 +57,14 @@
             <fmt:message key="age"/>
         </fmt:bundle>
 
+        <fmt:setLocale value="si"/>
+
         <fmt:bundle basename="com.infinity.webapp.Data" prefix="si.">
             <fmt:message var="hello" key="hello"/>
         </fmt:bundle>
-            
-            <h1>${hello} World!!</h1>
+
+        <h1>${hello} World!!</h1>
+        
+        
     </body>
 </html>
