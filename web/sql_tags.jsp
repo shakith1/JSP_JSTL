@@ -19,9 +19,11 @@
                            user="root" 
                            password="1234"/>
         ${db}
-        
-        <sql:query var="result" sql="SELECT * FROM `user`" dataSource="${db}"/>
-        
+
+        <sql:query var="result" dataSource="${db}">
+            SELECT * FROM `user`
+        </sql:query>
+
         <c:forEach var="rs" items="${result.rows}">
             ${rs.nic}<br/>
         </c:forEach>
