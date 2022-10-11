@@ -14,9 +14,11 @@
     </head>
     <body>
         <sql:setDataSource var="db" driver="com.mysql.cj.jdbc.Driver" 
-                           url="jdbc:mysql://localhost:3306/abc" 
+                           url="jdbc:mysql://localhost:3306/abc?useSSL=false" 
                            user="root" 
                            password="1234"/>
         ${db}
+        
+        <sql:query var="result" sql="SELECT * FROM `user`" dataSource="${db}"/>
     </body>
 </html>
