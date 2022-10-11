@@ -75,6 +75,24 @@
             <fmt:message key="hello"/>
         </fmt:bundle>
 
+        <!--   fmt:timezone   -->
+
+        <jsp:useBean id="now1" class="java.util.Date"/>
+
+        <table>
+            <c:forEach var="zone" items="<%=java.util.TimeZone.getAvailableIDs()%>">
+                <tr>
+                    <td>
+                        <c:out value="${zone}"/>
+                    </td>
+                    <td>
+                        <fmt:timeZone value="${zone}">
+                            <fmt:formatDate value="${now1}"/>
+                        </fmt:timeZone>
+                    </td>
+                </tr>
+            </c:forEach>
+        </table>
 
     </body>
 </html>
