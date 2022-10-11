@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
 <!DOCTYPE html>
 <html>
@@ -20,5 +21,9 @@
         ${db}
         
         <sql:query var="result" sql="SELECT * FROM `user`" dataSource="${db}"/>
+        
+        <c:forEach var="rs" items="${result.rows}">
+            ${rs.nic}<br/>
+        </c:forEach>
     </body>
 </html>
