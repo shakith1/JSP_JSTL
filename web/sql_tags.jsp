@@ -27,5 +27,11 @@
         <c:forEach var="rs" items="${result.rows}">
             ${rs.nic}<br/>
         </c:forEach>
+            
+            <sql:update sql="UPDATE product SET name=?,brand=? WHERE id=?" dataSource="${db}">
+                <sql:param value="Biscuit"/>
+                <sql:param value="Maliban"/>
+                <sql:param value="1"/>
+            </sql:update>
     </body>
 </html>
