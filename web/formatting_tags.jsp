@@ -79,7 +79,7 @@
 
         <jsp:useBean id="now1" class="java.util.Date"/>
 
-<!--        <table>
+        <table>
             <c:forEach var="zone" items="<%=java.util.TimeZone.getAvailableIDs()%>">
                 <tr>
                     <td>
@@ -92,21 +92,24 @@
                     </td>
                 </tr>
             </c:forEach>
-        </table>-->
-
-        <table>
-            <c:forEach var="zone" items="<%=java.util.TimeZone.getAvailableIDs()%>">
-                <fmt:setTimeZone value="${zone}"/>
-                <tr>
-                    <td>
-                        <c:out value="${zone}"/>
-                    </td>
-                    <td>
-                        <fmt:formatDate value="${now1}"/>
-                    </td>
-                </tr>
-            </c:forEach>
         </table>
+
+        <jsp:useBean id="now2" class="java.util.Date"/>
+
+        <%--        <table>
+
+     <c:forEach var="zone1" items="<%=java.util.TimeZone.getAvailableIDs()%>">
+         <fmt:setTimeZone value="${zone1}"/>
+         <tr>
+             <td>
+                 <c:out value="${zone1}"/>
+             </td>
+             <td>
+                 <fmt:formatDate value="${now2}" type="both"/>
+             </td>
+         </tr>
+     </c:forEach>
+ </table>--%>
 
     </body>
 </html>
