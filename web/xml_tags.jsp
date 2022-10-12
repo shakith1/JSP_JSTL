@@ -57,11 +57,13 @@
     
     <x:out select="$output/users/user[1]/name"/>
     
-    <x:out select="$output///user[1]/name"/>
+    <x:out select="$output//user[1]/name"/><br/>
     
     <!--x:foreach-->
     
-    
+    <x:forEach select="$output//user" var="user">
+        <x:out select="$user/name"/><br/>
+    </x:forEach>
 
 </body>
 </html>
