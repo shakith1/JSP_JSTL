@@ -46,6 +46,22 @@
     <!--${book}-->
     <x:out select="$book"/><br/>
     <x:out select="$book/name"/>
+    
+    <!--Outside xml-->
+    
+    <c:import url="users.xml" var="users"/>
+    ${users}
+    <br/><!-- comment -->
+    
+    <x:parse var="output" xml="${users}"/>
+    
+    <x:out select="$output/users/user[1]/name"/>
+    
+    <x:out select="$output///user[1]/name"/>
+    
+    <!--x:foreach-->
+    
+    
 
 </body>
 </html>
