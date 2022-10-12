@@ -44,7 +44,8 @@
     
     <h1>Book</h1>
     <!--${book}-->
-    <x:out select="$book"/>
+    <x:out select="$book"/><br/>
+    <x:out select="$book/name"/>
 
 </body>
 </html>
