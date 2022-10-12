@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+<users>
+    <user>
+        <name>Shakith</name>
+        <email>nimsara.shakith@gmail.com</email>
+        <address>Negombo</address>
+        <contact>0768856084</contact>
+    </user>
+    <user>
+        <name>Nimsara</name>
+        <email>shakith.nimsara@gmail.com</email>
+        <address>Colombo</address>
+        <contact>0717771111</contact>
+    </user>
+    <user>
+        <name>Dilshan</name>
+        <email>dilshan@gmail.com</email>
+        <address>Seeduwa</address>
+        <contact>0711111777</contact>
+    </user>
+    
+</users>
