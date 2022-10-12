@@ -68,5 +68,11 @@
         <x:if select="$output//user">
             <h1>Error</h1>
         </x:if>
+            
+            <x:if select="$output//user" var="isUser"/>
+            
+            <c:if test="${!isUser}">
+                <c:out value="Document has one user" escapeXml="true"/>
+            </c:if>
 </body>
 </html>
