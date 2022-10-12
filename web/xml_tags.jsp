@@ -36,7 +36,7 @@
     
     <x:parse xml="${xmltext}" var="output"/>
     
-    <x:out select="output"/>
+    <x:out select="$output"/>
 
 </body>
 </html>
