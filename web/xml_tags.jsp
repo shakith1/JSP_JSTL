@@ -30,7 +30,7 @@
         </books>
     </c:set>
 
-    <c:out value="${xmltext}" escapeXml="true"/>
+    <c:out value="${xmltext}" escapeXml="false"/>
 
 </body>
 </html>
