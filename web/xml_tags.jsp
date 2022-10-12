@@ -65,5 +65,8 @@
         <x:out select="$user/name"/><br/>
     </x:forEach>
 
+        <x:if select="$output//user">
+            <h1>Error</h1>
+        </x:if>
 </body>
 </html>
