@@ -36,7 +36,9 @@
     
     <x:parse xml="${xmltext}" var="output"/>
     
-    <x:out select="$output"/>
+    <x:out select="$output"/><br/>
+    
+    <x:out select="$output/books/book[1]/author"/>
 
 </body>
 </html>
