@@ -34,7 +34,9 @@
     
     <!--   x:out   -->
     
-    <x:out select="xmltext"/>
+    <x:parse xml="${xmltext}" var="output"/>
+    
+    <x:out select="output"/>
 
 </body>
 </html>
