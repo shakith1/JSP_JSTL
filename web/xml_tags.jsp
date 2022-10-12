@@ -38,7 +38,13 @@
     
     <x:out select="$output"/><br/>
     
-    <x:out select="$output/books/book[1]/author"/>
+    <x:out select="$output/books/book[1]/author"/><br/>
+    
+    <x:set var="book" select="$output/books/book[2]"/>
+    
+    <h1>Book</h1>
+    <!--${book}-->
+    <x:out select="$book"/>
 
 </body>
 </html>
