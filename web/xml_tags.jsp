@@ -31,6 +31,10 @@
     </c:set>
 
     <c:out value="${xmltext}" escapeXml="false"/>
+    
+    <!--   x:out   -->
+    
+    <x:out select="xmltext"/>
 
 </body>
 </html>
